@@ -1,0 +1,61 @@
+  
+html {
+  font-size: 16px;
+}
+
+* {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  margin:0;
+  padding:0;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: $c-white;
+  font-family: Titillium Web;
+  
+}
+html,
+body,
+.container {
+height: 100%;
+}
+
+.container {
+width: 100%;
+max-width: 1440px;
+padding: 0 16px;
+display: flex;
+justify-content: center;
+box-sizing: border-box;
+margin: auto;
+}
+
+
+p, h1, h2, h3 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+li {
+  border: 0;
+  margin: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
