@@ -4,15 +4,16 @@ import cartIcon from '../icons/cart.svg'
 import Search from '../components/Search/Search'
 const Header = () => {
   return(
-    <div className="container">
+    
       <header className="header">
-        <Logo/>
-        <Menu></Menu>
-        <Search/>
-        <span>Login</span>
-        <img src={cartIcon} />
+        <div className="container">
+          <Logo/>
+          <Menu></Menu>
+          <Search/>
+          <span>Login</span>
+          <img src={cartIcon} />
+        </div>
       </header>
-    </div>
 
   )
 }

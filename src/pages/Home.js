@@ -1,7 +1,8 @@
-function Home(){
+import NewsLetter from '../components/NewsLetter'
+const Home = () =>{
   return(
-    <div className="container">
-      olaaaaa
+    <div className="home">
+      <NewsLetter/>
     </div>
   )
 }
