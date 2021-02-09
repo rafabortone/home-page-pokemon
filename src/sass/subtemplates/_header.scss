@@ -1,5 +1,75 @@
 .header {
   width: 100%;
   display: flex;
+  align-items: center;
+  height: 80px;
   background-color: $c-white;
+  padding: 20px 24px;
+  font-weight: 500;
+
+  &__menu {
+    width: 60%;
+
+    &--list {
+      display: flex;
+      align-items: center;
+    }
+
+    &--item {
+      margin-left: 32px;
+
+      a {
+        cursor: pointer;
+
+        font: {
+          size: 14px;
+          weight: 500;
+        }
+
+        @media screen and(min-width: 768px) {
+          font-size: 16px;
+          padding: 20px 0;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__search {
+    border: {
+      color: $c-gray;
+      radius: 50px;
+      style: solid;
+      width: 1px;
+    }
+
+    font: {
+      size: 16px;
+    }
+
+    margin-right: 32px;
+    padding: 8px 16px;
+
+    &::-webkit-input-placeholder {
+      color: $c-pink-jussi;
+    }
+
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: $c-pink-jussi;
+    }
+
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: $c-pink-jussi;
+    }
+
+    &:-ms-input-placeholder {
+      color: $c-pink-jussi;
+    }
+  }
+
 }
