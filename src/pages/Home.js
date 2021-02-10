@@ -1,8 +1,10 @@
 import NewsLetter from '../components/NewsLetter'
 import bannerAbout from '../images/image-jussi.png'
+import Vitrine from '../subtemplates/Vitrine'
 function Home() {
   return(
     <div className="home">
+      <Vitrine></Vitrine>
       <section className="home__about">
         <div className="home__about--left"></div>
         <div className="home__about--right"></div>
