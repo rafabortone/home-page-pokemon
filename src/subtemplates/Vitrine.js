@@ -1,84 +1,32 @@
 import React, { Component } from "react";
 
-const products = [
-  {
-    nome:"Produto 1",
-    descricao:"Descrição do produto1",
-    image:'http://localhost:3000/images/p1.png',
-    features: [
-      {
-        nome:'Feature 1'
-      },
-      {
-        nome:'Feature 2'
-      },
-      {
-        nome:'Feature 3'
-      }
-    ],
-    url:'#'
-  },
-  {
-    nome:"Produto 2",
-    descricao:"Descrição do produto2",
-    image:'http://localhost:3000/images/p2.png',
-    features: [
-      {
-        nome:'Feature 1'
-      },
-      {
-        nome:'Feature 2'
-      },
-      {
-        nome:'Feature 3'
-      }
-    ],
-    url:'#'
-  },
-  {
-    nome:"Produto 3",
-    descricao:"Descrição do produto3",
-    image:'http://localhost:3000/images/p3.png',
-    features: [
-      {
-        nome:'Feature 1'
-      },
-      {
-        nome:'Feature 2'
-      },
-      {
-        nome:'Feature 3'
-      }
-    ],
-    url:'#'
-  },
-  {
-    nome:"Produto 4",
-    descricao:"Descrição do produto4",
-    image:'http://localhost:3000/images/p4.png',
-    features: [
-      {
-        nome:'Feature 1'
-      },
-      {
-        nome:'Feature 2'
-      },
-      {
-        nome:'Feature 3'
-      }
-    ],
-    url:'#'
+ class Vitrine extends Component {
+
+  state = {
+    list: []
   }
-]
 
+  async fetchApi() {
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=4');
+    const data = await response.json();  
+    data.results.map(async item => {
+      this.getPokemon(item.url);
+    })
+  }
 
-class Vitrine extends Component {
+  async getPokemon(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    this.setState({list: this.state.list.concat(data)});
+  }
 
+  componentDidMount() {
+    this.fetchApi();
+  }
+  
   render() {
-    const listProducts = products
-
-    if(!listProducts) return null
-
+    const list = this.state.list
+    console.log(list);
     return(
       <section className="vitrine">
         <div className="container">
@@ -88,21 +36,27 @@ class Vitrine extends Component {
               <h2>Nossas Soluções</h2>
             </div>
             <ul className="vitrine__content">
-              {listProducts.map(item => {
+              {list.map(item => {
                 return (
                 <li className="vitrine__content--item">
                   <article>
-                    <img src={item.image} className="home__vitrine--item--image"></img>
-                    <p className="vitrine__content--item--nome">{item.nome}</p>
-                    <p className="vitrine__content--item--descricao">{item.descricao}</p>
-                    <ul className="vitrine__content--item--list">
-                      {item.features.map(feature => {
-                        return(
-                          <li className="vitrine__content--item--feature">{feature.nome}</li>
-                        )
+                    <img src={item.sprites.front_default} className="home__vitrine--item--image"></img>
+                    <p className="vitrine__content--item--nome">{item.name}</p>
+                    <p className="vitrine__content--item--descricao">
+                      {item.types.map(item => {
+                          return(
+                            <span>{item.type.name+" "}</span>
+                          )
                       })}
+                    </p>
+                    <ul className="vitrine__content--item--list">
+                      {item.abilities.map(item => {
+                          return(
+                            <li className="vitrine__content--item--feature">{item.ability.name}</li>
+                          )
+                        })}
                     </ul>
-                    <a href={item.url}>Ver Solução</a>
+                  <a href="">Ver Solução</a>
                   </article>
                 </li>
                 )
@@ -114,4 +68,5 @@ class Vitrine extends Component {
     )
   }
 }
+
 export default Vitrine;

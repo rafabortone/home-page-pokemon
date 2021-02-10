@@ -57,7 +57,7 @@
     &--wrapper {
       display: flex;
       width: 100%;
-      max-width:  1090px;
+      max-width:  1024px;
       justify-content: space-between;
     }
 
@@ -101,5 +101,9 @@
         max-width: 676px;
       }
     }
+  }
+  &__lojas {
+    background-color: $c-gray;
+    padding: 28px 0;
   }
 }
