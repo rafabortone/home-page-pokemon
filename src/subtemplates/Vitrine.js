@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,7 +6,6 @@ const Vitrine = ({list}) => {
   
   const settings = {
     dots: true,
-    infinite: true,
     speed: 500,
     infinite:false,
     slidesToShow: 4,
