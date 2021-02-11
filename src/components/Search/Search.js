@@ -29,7 +29,7 @@ class Search extends Component {
   }
 
   handleChange = (e) => {
-    console.log(e.target.value);
+
     if(e.target.value !== " " && e.target.value.length > 1) {
       this.setState({searchValue: e.target.value})
       this.setState({show:true});
@@ -46,7 +46,7 @@ class Search extends Component {
 
     const {searchValue, list } = this.state;
     let search = []
-    console.log(searchValue);
+
     if(searchValue != '' && searchValue.length > 1) {
       search = list.filter(res =>(
         res.name.includes(searchValue)
