@@ -1,6 +1,7 @@
 # Home page feita com React.js com campo de busca e vitrine consumindo api https://pokeapi.co/
 
-## https://rafabortone.github.io/home-page/
+
+## Publicado em: https://rafabortone.github.io/home-page/
 
 ### `npm i`
 
