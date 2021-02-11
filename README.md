@@ -1,5 +1,6 @@
 # Home page fita com React.js com campo de busca e vitrine consumindo api https://pokeapi.co/
 
+### `npm i`
 
 ### `yarn start`
 
