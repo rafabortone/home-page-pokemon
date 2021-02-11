@@ -49,12 +49,14 @@ class Home extends Component {
           </div>
         </section>
         <section className="home__lojas">
-          <Lojas></Lojas>
+          <div className="container">
+            <Lojas></Lojas>
+          </div>
         </section>
         <Vitrine
           list = {this.state.list}
         ></Vitrine>
-        <section className="home__about">
+        <section className="home__about" id="about">
           <div className="home__about--left"></div>
           <div className="home__about--right"></div>
           <div className="container">  

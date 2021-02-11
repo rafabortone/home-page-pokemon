@@ -1,4 +1,5 @@
 import { Component } from "react";
+import searchIcon from '../../icons/search.svg'
 class Search extends Component {
 
 
@@ -59,7 +60,9 @@ class Search extends Component {
           className="header__search--input"
           placeholder="buscar"
           onChange={this.handleChange}
+          
         />
+        <img src={searchIcon} className="header__search--icon"></img>
           {search && (
           <div className={this.state.show ? "header__search--list active" : "header__search--list" }>
             {search.map(item => {

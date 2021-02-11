@@ -7,32 +7,57 @@
     &--wrapper {
       align-items: center;
       display: flex;
+      flex-direction: column;
       margin: 0 auto;
+      justify-content: center;
       max-width: 1024px;
+      @media screen and (min-width: 1025px) {
+        flex-direction: row;
+      }
+      font-weight: 500;
     }
-    &--left, &--right {
-      width: 50%;
+
+    &--left {
+      width: 70%;
+      max-width: 768px;
+      @media screen and (min-width: 769px) {
+        width: 50%;
+      }
     }
-  
+    &--right {
+      width: 100%;
+      max-width: 768px;
+      @media screen and (min-width: 769px) {
+        width: 50%;
+      }
+    }
     &--title {
       display: flex;
       position: relative;
       span {
         color: $c-white;
-        font-size: 64px;
+        font-size: 50px;
         margin-right: 10px;
-        margin-top: 10px;
         position: absolute;
-        left: -80px;
+        left: -40px;
+        @media screen and (min-width: 769px) {
+          width: 50%;
+          font-size: 64px;
+          left: -80px;
+        }
       }
       h1 {
         margin: 10px 0 16px;
         font-weight: 500;
-        font-size: 64px;
-        line-height: 76px;
+        font-size: 50px;
+        line-height: 62px;
         color: $c-black;
         text-transform: uppercase;
         max-width: 451px;
+        @media screen and (min-width: 769px) {
+          width: 50%;
+          font-size: 64px;
+        }
       }
     }
   
@@ -112,11 +137,9 @@
     display: flex;
     min-height: 648px;
 
-    
-
     .container{
       position: absolute;
-      padding: 64px 0;
+      padding: 64px 16px;
       left: 0;
       right: 0;
       display: flex;

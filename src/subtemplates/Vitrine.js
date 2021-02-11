@@ -14,7 +14,7 @@ const Vitrine = ({list}) => {
 
   return(
     
-    <section className="vitrine">
+    <section className="vitrine" id="solucoes">
     
       <div className="container">
         <div className="vitrine__wrapper">

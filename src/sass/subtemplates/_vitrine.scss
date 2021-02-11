@@ -3,7 +3,7 @@
   .container {
     display: flex;
     justify-content: center;
-    padding: 56px 0;
+    padding: 56px 16px;
   }
 
   &__title{
@@ -189,10 +189,16 @@
   }
 
   .slick-prev {
-    left: -40px;
+    left: 0;
+    @media screen and (min-width: 1025px) {
+      left: -40px;
+    }
   }
   .slick-next {
-    right: -30px;
+    right: 0px;
+    @media screen and (min-width: 1025px) {
+      right: -30px;
+    }
   }
 
   .slick-track {
@@ -200,6 +206,9 @@
   }
   .slick-list {
     width: 1024px;
+  }
+  .slick-slider {
+    width: 100%;
   }
   .slick-slide {
     margin-right:10px;

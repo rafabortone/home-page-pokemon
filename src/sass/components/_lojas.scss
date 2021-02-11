@@ -1,12 +1,16 @@
 .lojas {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   max-width: 1024px;
   margin: 0 auto;
   align-items: center;
-
+  justify-content: center;
+  @media screen and (min-width: 769px) {
+    flex-wrap: nowrap;
+  }
   &__title {
-    width: 30%;
+    width: 100%;
+    max-width: 320px;
     display: flex;
     justify-content: space-between;
     margin-right: 48px;
@@ -17,12 +21,19 @@
     span {
       margin-left: 10px;
     }
-
   }
   &__list {
-    width: 70%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    @media screen and (min-width: 769px) {
+      flex-direction: row;
+    }
+
+    &--item {
+      margin: 10px 0;
+    }
   }
 }

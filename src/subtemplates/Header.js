@@ -10,8 +10,10 @@ const Header = () => {
           <Logo/>
           <Menu></Menu>
           <Search/>
-          <span>Login</span>
-          <img src={cartIcon} />
+          <div className="header__login">
+            <span>Login</span>
+            <img src={cartIcon} />
+          </div>
         </div>
       </header>
 
