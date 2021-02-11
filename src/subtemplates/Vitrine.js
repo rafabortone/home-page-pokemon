@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
   }
 
   async fetchApi() {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=10');
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=9');
     const data = await response.json();  
     data.results.map(async item => {
       this.getPokemon(item.url);
@@ -19,7 +19,11 @@ import "slick-carousel/slick/slick-theme.css";
   async getPokemon(url) {
     const response = await fetch(url);
     const data = await response.json();
+
+    if(!data) return null
+      
     this.setState({list: this.state.list.concat(data)});
+    
   }
 
   componentDidMount() {
@@ -37,7 +41,7 @@ import "slick-carousel/slick/slick-theme.css";
     };
 
     const list = this.state.list
-    console.log(list);
+
     return(
       
       <section className="vitrine">
@@ -52,7 +56,7 @@ import "slick-carousel/slick/slick-theme.css";
                 <Slider {...settings}>
                   {list.map(item => {
                     return (
-                    <li className="vitrine__content--item">
+                    <li className="vitrine__content--item" key={item.id}>
                       <article>
                         <img src={item.sprites.front_default} className="home__vitrine--item--image"></img>
                         <p className="vitrine__content--item--nome">{item.name}</p>
