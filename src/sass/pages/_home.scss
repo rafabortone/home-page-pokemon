@@ -1,5 +1,79 @@
 .home {
 
+  &__banner {
+    background-color: $c-green-jussi;
+    height: auto;
+  
+    &--wrapper {
+      align-items: center;
+      display: flex;
+      margin: 0 auto;
+      max-width: 1024px;
+    }
+    &--left, &--right {
+      width: 50%;
+    }
+  
+    &--title {
+      display: flex;
+      position: relative;
+      span {
+        color: $c-white;
+        font-size: 64px;
+        margin-right: 10px;
+        margin-top: 10px;
+        position: absolute;
+        left: -80px;
+      }
+      h1 {
+        margin: 10px 0 16px;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 76px;
+        color: $c-black;
+        text-transform: uppercase;
+        max-width: 451px;
+      }
+    }
+  
+    &--text {
+      font: {
+        size: 16px;
+        weight: 500;
+      } 
+      max-width: 329px;
+      line-height: 24px;
+    }
+  
+    &--button {
+      align-items: center;
+      border: {
+        color: $c-black;
+        style: solid;
+        radius: 6px;
+        width: 1px;
+      }
+      display: flex;
+      justify-content: center;
+      height: 48px;
+      margin-top: 32px;
+      width: 169px;
+      a {
+        color: $c-black;
+        font-weight: 500;
+      }
+    }
+  
+    &--img {
+      margin-top: 40px;
+      width: 100%;
+  
+      @media screen and (min-width: 1024px) {
+        width: unset;
+      }
+    }
+  }
+
   &__contato {
     background-color: $c-pink-jussi;
     color: $c-white;
@@ -37,6 +111,8 @@
     position: relative;
     display: flex;
     min-height: 648px;
+
+    
 
     .container{
       position: absolute;

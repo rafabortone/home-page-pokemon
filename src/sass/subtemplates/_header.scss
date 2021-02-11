@@ -6,7 +6,7 @@
   font-weight: 500;
 
   &__menu {
-    width: 60%;
+    width: 50%;
 
     &--list {
       display: flex;
@@ -35,38 +35,85 @@
       }
     }
   }
-
+  form {
+    
+  }
   &__search {
-    border: {
-      color: $c-gray;
-      radius: 50px;
-      style: solid;
-      width: 1px;
+
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+      
+    &--input {
+      border: {
+        color: $c-gray;
+        radius: 50px;
+        style: solid;
+        width: 1px;
+      }
+  
+      font: {
+        size: 16px;
+      }
+  
+      margin-right: 32px;
+      padding: 8px 16px;
+
+      &::-webkit-input-placeholder {
+        color: $c-pink-jussi;
+      }
+  
+      &:-moz-placeholder {
+        /* Firefox 18- */
+        color: $c-pink-jussi;
+      }
+  
+      &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $c-pink-jussi;
+      }
+  
+      &:-ms-input-placeholder {
+        color: $c-pink-jussi;
+      }
+  
+      &:focus{
+        width: 100%;
+      }
     }
 
-    font: {
-      size: 16px;
+    &--list {
+      position: absolute;
+      left: 10px;
+      top: 110%;
+      display: none;
+      flex-wrap: wrap;
+      background-color: $c-white;
+      padding: 16px;
+      width: 100%;
+      z-index: 10;
+      box-shadow: -16px 23px 18px 2px rgba(0,0,0,0.3);
     }
-
-    margin-right: 32px;
-    padding: 8px 16px;
-
-    &::-webkit-input-placeholder {
-      color: $c-pink-jussi;
+    .active {
+      display: flex;
     }
-
-    &:-moz-placeholder {
-      /* Firefox 18- */
-      color: $c-pink-jussi;
-    }
-
-    &::-moz-placeholder {
-      /* Firefox 19+ */
-      color: $c-pink-jussi;
-    }
-
-    &:-ms-input-placeholder {
-      color: $c-pink-jussi;
+    &--item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $c-white;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      padding: 5px;
+      border: {
+        style: solid;
+        color: $c-gray;
+        width: 1px;
+        radius: 6px;
+      }
+      box-shadow: -3px 3px 9px 1px rgba(0,0,0,0.1);
     }
   }
 
