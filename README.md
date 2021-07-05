@@ -1,7 +1,8 @@
-# Home page feita com React.js com campo de busca e vitrine consumindo api https://pokeapi.co/
+Home page responsiva desenvolvida seguindo um layout do figma, para um teste. 
 
+Feita com React.js, com campo de busca e vitrine consumindo api https://pokeapi.co/
 
-## Publicado em: https://rafabortone.github.io/home-page/
+Publicado em: https://rafabortone.github.io/home-page/
 
 ### `npm i`
 
