@@ -4,6 +4,8 @@ Feita com React.js, com campo de busca e vitrine consumindo api https://pokeapi.
 
 Publicado em: https://rafabortone.github.io/home-page/
 
+![Alt text](mobile_1.gif)
+
 ### `npm i`
 
 ### `yarn start`
